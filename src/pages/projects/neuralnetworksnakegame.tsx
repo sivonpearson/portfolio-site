@@ -10,4 +10,4 @@ const SnakeNNPage: React.FC<PageProps> = () => {
 
 export default SnakeNNPage;
 
-export const Head: HeadFC = () => <title>Neural Network Snake Game</title>;
+export const Head: HeadFC = () => <title>Sivon Pearson | Projects</title>;

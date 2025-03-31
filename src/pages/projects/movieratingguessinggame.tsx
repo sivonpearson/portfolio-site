@@ -10,4 +10,4 @@ const MovieGuessProject: React.FC<PageProps> = () => {
 
 export default MovieGuessProject;
 
-export const Head: HeadFC = () => <title>Movie Rating Guessing Game</title>;
+export const Head: HeadFC = () => <title>Sivon Pearson | Projects</title>;

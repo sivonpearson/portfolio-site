@@ -12,6 +12,4 @@ const DisasterForecastingPage: React.FC<PageProps> = () => {
 
 export default DisasterForecastingPage;
 
-export const Head: HeadFC = () => (
-  <title>Climate-Change Disaster Forecasting Tool</title>
-);
+export const Head: HeadFC = () => <title>Sivon Pearson | Projects</title>;

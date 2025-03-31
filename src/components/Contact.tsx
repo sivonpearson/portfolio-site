@@ -22,9 +22,8 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="max-w-3xl mx-auto p-6 bg-gray-100 rounded-lg shadow-md"
+      className="max-w-3xl mx-auto p-6 bg-black bg-opacity-10 rounded-lg shadow-md"
     >
-      <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Name</label>
@@ -34,7 +33,7 @@ const Contact: React.FC = () => {
             placeholder="Your name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border border-transparent rounded bg-black text-white placeholder-white"
             required
           />
         </div>
@@ -46,7 +45,7 @@ const Contact: React.FC = () => {
             placeholder="Your email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border border-transparent rounded bg-black text-white placeholder-white"
             required
           />
         </div>
@@ -57,14 +56,15 @@ const Contact: React.FC = () => {
             placeholder="Your message"
             value={formData.message}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border border-transparent rounded bg-black text-white placeholder-white"
             rows={4}
+            style={{ resize: "vertical" }}
             required
           />
         </div>
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          className="px-4 py-2 bg-black text-white rounded hover:bg-gray-700"
         >
           Send
         </button>

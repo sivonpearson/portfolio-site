@@ -27,6 +27,15 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/images`, // Path to your images folder
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `montserrat\:300`, // Add the font weights you need
+        ],
+        display: "swap",
+      },
+    },
   ],
 };
 

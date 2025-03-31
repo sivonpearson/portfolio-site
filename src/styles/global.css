@@ -20,10 +20,12 @@
     @apply text-lg text-white;
   }
   :any-link {
+    @apply text-white;
     text-decoration: none;
   }
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    @apply text-white;
+    font-family: "Montserrat";
   }
 }
 
@@ -37,6 +39,30 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+.header-primary {
+  font-size: large;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.header-secondary {
+  font-size: large;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: #a8a29e;
+  transition-duration: 150ms;
+}
+
+.header-secondary:hover {
+  color: white;
 }
 
 span.menu {
