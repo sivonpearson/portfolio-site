@@ -13,16 +13,30 @@ const Contact: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted", formData);
+    const response = await fetch("https://formspree.io/f/xblgawjn", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
     // Handle form submission logic (API call, email service, etc.)
   };
 
   return (
     <section
       id="contact"
-      className="max-w-3xl mx-auto p-6 bg-black bg-opacity-10 rounded-lg shadow-md"
+      className="max-w-3xl mx-auto p-6 bg-black bg-opacity-10 rounded-lg shadow-2xl shadow-white mb-16 scrolling-appear"
     >
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>

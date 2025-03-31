@@ -41,6 +41,11 @@ body {
   overflow-x: hidden;
 }
 
+.indented-list-item {
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+}
+
 .header-primary {
   font-size: large;
   background-color: rgba(0, 0, 0, 0.75);
@@ -75,16 +80,4 @@ span.menu {
 
 span.menu:hover {
   letter-spacing: 10px;
-}
-
-a.social {
-  margin: 0 1rem;
-  transition: transform 250ms;
-  display: inline-block;
-  color: black;
-}
-
-a.social:hover {
-  transform: translateY(-2px);
-  color: white;
 }

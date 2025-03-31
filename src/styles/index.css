@@ -18,7 +18,8 @@
 
 .animate-bounce-wave {
   --amplitude: 10px;
-  animation: bounceWave 1s infinite ease-in-out;
+  --speed: 1s;
+  animation: bounceWave var(--speed) infinite ease-in-out;
 }
 
 p {
@@ -32,4 +33,81 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.scrolling-fade-in {
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.scrolling-appear {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.scrolling-fade-left {
+  animation: fade-left linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes fade-right {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.scrolling-fade-right {
+  animation: fade-right linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+  color: black;
+}
+
+a.social:hover {
+  color: white;
 }

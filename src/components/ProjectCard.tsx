@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "gatsby";
 import { FaGithub } from "react-icons/fa";
-import { StaticImage } from "gatsby-plugin-image";
 import ImageLoader from "./ImageLoader";
 
-type Props = {
+export type ProjectData = {
   title: string;
   imageName: string;
   description: string;
   tags: string[];
   pagelink: string;
-  githublink: string | null;
+  githublink: string;
 };
 
 const tagColors = ["#FF0000", "#00FF00", "#0000FF"];
@@ -22,20 +21,25 @@ const ProjectCard = ({
   tags,
   pagelink,
   githublink,
-}: Props) => {
+}: ProjectData) => {
   return (
-    <Link
-      to={`/${pagelink}`}
-      // bg-black bg-opacity-0 hover:bg-opacity-50 ease-in-out transition-opacity duration-300
-      className="relative max-w-32 max-h-64 p-12"
+    // <Link
+    //   to={`/${pagelink}`}
+    //   className="relative w-80 h-full p-2 bg-black bg-opacity-10 hover:bg-opacity-50 transition-colors duration-300 align-middle shadow-2xl shadow-white"
+    // >
+    <a
+      href={githublink}
+      className="relative w-80 h-full p-2 bg-black bg-opacity-10 hover:bg-opacity-50 transition-colors duration-300 align-middle shadow-2xl shadow-white"
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <ImageLoader imageName={imageName} />
-      </div>
+      </div> */}
       {githublink && (
         <a
           href={githublink}
-          className="absolute top-0 right-5 z-10"
+          className="absolute top-2 right-2 z-50 object-cover"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -45,11 +49,12 @@ const ProjectCard = ({
       <div className="relative">
         <h4 className="text-balance">{title}</h4>
         <p className="leading-relaxed">{description}</p>
-        <div className="flex gap-3 h-max align-middle">
+        {/* <div className="flex gap-3 h-max align-middle"> */}
+        <div className="grid grid-cols-3 gap-1 h-max align-middle">
           {tags.map((tag, index) => (
             <p
               key={index}
-              className="bg-black bg-opacity-50 rounded-lg px-2 text-center h-fit justify-center align-middle"
+              className="bg-black bg-opacity-50 rounded-3xl p-1 text-center h-fit justify-center align-middle"
               style={{ color: tagColors[index % tagColors.length] }}
             >
               {tag}
@@ -57,7 +62,8 @@ const ProjectCard = ({
           ))}
         </div>
       </div>
-    </Link>
+    </a>
+    // </Link>
   );
 };
 

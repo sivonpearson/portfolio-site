@@ -3,9 +3,11 @@ import React from "react";
 
 type Props = {
   text: string;
+  amplitude: string;
+  speed: string;
 };
 
-const JumpingLetters: React.FC<Props> = ({ text }: Props) => {
+const JumpingLetters: React.FC<Props> = ({ text, amplitude, speed }: Props) => {
   return (
     <div
       className="flex justify-center text-center items-center h-fit space-x-2"
@@ -21,7 +23,8 @@ const JumpingLetters: React.FC<Props> = ({ text }: Props) => {
           style={
             {
               animationDelay: `${index * 0.1}s`,
-              "--amplitude": "10px",
+              "--amplitude": amplitude,
+              "--speed": speed,
             } as React.CSSProperties
           }
         >
