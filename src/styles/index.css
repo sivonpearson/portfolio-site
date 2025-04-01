@@ -103,7 +103,7 @@ p {
 
 a.social {
   margin: 0 1rem;
-  transition: transform 250ms;
+  transition: 150ms ease-in-out;
   display: inline-block;
   color: black;
 }

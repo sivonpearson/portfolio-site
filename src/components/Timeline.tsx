@@ -21,6 +21,7 @@ const Timeline: React.FC<Props> = ({ workdata }: Props) => {
       <Circle />
       {workdata.map((datum: WorkData, key: React.Key | null | undefined) => {
         return (
+          // TODO: add company logo
           <Fragment key={key}>
             <div className="grid grid-cols-[1fr_auto_1fr] gap-x-2 items-center mx-auto">
               {datum.is_left ? (

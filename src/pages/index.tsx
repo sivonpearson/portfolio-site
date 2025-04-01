@@ -8,6 +8,16 @@ import Timeline from "../components/Timeline";
 import workdata from "../data/WorkData";
 import JumpingLetters from "../components/JumpingLetters";
 
+// TODO:
+// Add responsiveness
+// Ensure all css is exported to Github Pages correctly
+// Add Personal Project pages
+// Add Personal Project pictures
+// Fix overall formatting
+// Fix Project page grid overlap when webpage is made smaller
+// Add Resume area
+// Testimonials
+
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <div id="top">
@@ -49,7 +59,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <br />
           <br />
           <br />
-          <span className="absolute left-1/2 origin-bottom-left">
+          <span>
             <JumpingLetters text={"SCROLL"} amplitude={"3px"} speed={"0.75s"} />
           </span>
           <br />
@@ -117,7 +127,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <br />
           <span id="projects">
             <h2 className="scrolling-appear">Projects</h2>
-            <div className="grid grid-cols-3 gap-2 scrolling-appear">
+            <div className="grid grid-cols-3 xs:grid-cols-1 gap-2 scrolling-appear">
               {projectdata.map((projectcard, index) => (
                 <ProjectCard {...projectcard} key={index} />
               ))}

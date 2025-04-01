@@ -72,13 +72,14 @@ const Contact: React.FC = () => {
             onChange={handleChange}
             className="w-full p-2 border border-transparent rounded bg-black text-white placeholder-white"
             rows={4}
-            style={{ resize: "vertical" }}
+            style={{ resize: "vertical", fontFamily: "Montserrat" }}
             required
           />
         </div>
         <button
           type="submit"
-          className="px-4 py-2 bg-black text-white rounded hover:bg-gray-700"
+          className="px-4 py-2 rounded bg-black text-white hover:bg-white hover:text-black hover:font-bold transition-all duration-150 border-transparent"
+          style={{ fontFamily: "Montserrat" }}
         >
           Send
         </button>

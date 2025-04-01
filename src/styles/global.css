@@ -23,7 +23,8 @@
     @apply text-white;
     text-decoration: none;
   }
-  body {
+  body,
+  input {
     @apply text-white;
     font-family: "Montserrat";
   }
@@ -53,6 +54,7 @@ body {
   padding-right: 8px;
   padding-top: 2px;
   padding-bottom: 2px;
+  border-radius: 0.5rem;
 }
 
 .header-secondary {
@@ -64,6 +66,7 @@ body {
   padding-bottom: 2px;
   color: #a8a29e;
   transition-duration: 150ms;
+  border-radius: 0.5rem;
 }
 
 .header-secondary:hover {

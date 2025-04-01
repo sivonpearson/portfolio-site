@@ -37,6 +37,19 @@ const config: GatsbyConfig = {
         display: "swap",
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Sivon Pearson's Portfolio`,
+        short_name: `Portfolio`,
+        start_url: `/`,
+        background_color: `#faf3e8`,
+        theme_color: `#faf3e8`,
+        display: `minimal-ui`,
+        cache_busting_mode: `query`,
+        icon: `src/icons/favicon512.png`,
+      },
+    },
   ],
 };
 
