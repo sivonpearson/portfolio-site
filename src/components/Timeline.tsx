@@ -79,13 +79,11 @@ const EventCard: React.FC<WorkData> = ({
         <div className="text-sm text-white">{company}</div>
       </div>
       <div className="text-sm text-white leading-loose">
-        {descriptions.map((description, key) => {
-          return (
-            <li key={key} className="indented-list-item">
-              {description}
-            </li>
-          );
-        })}
+        <ul>
+          {descriptions.map((description, key) => {
+            return <li key={key}>{description}</li>;
+          })}
+        </ul>
       </div>
     </div>
   );

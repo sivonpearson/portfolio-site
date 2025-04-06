@@ -7,15 +7,14 @@ import Backdrop from "../components/Backdrop";
 import Timeline from "../components/Timeline";
 import workdata from "../data/WorkData";
 import JumpingLetters from "../components/JumpingLetters";
+import ResumeDownload from "../components/ResumeDownload";
 
 // TODO:
 // Add responsiveness
 // Ensure all css is exported to Github Pages correctly
-// Add Personal Project pages
 // Add Personal Project pictures
 // Fix overall formatting
-// Fix Project page grid overlap when webpage is made smaller
-// Add Resume area
+// Fix Project page grid overlap when webpage is made smaller; min-width?
 // Testimonials
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -85,7 +84,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <br />
           <span id="about">
             <h2 className="scrolling-appear">About Me</h2>
-            <p className="max-w-3xl leading-loose scrolling-fade-in">
+            <p className="max-w-3xl leading-loose scrolling-fade-left">
               I'm a <strong>software developer</strong> passionate about
               building efficient, scalable, and user-friendly applications. With
               experience in <strong>web development</strong>,{" "}
@@ -110,7 +109,10 @@ const IndexPage: React.FC<PageProps> = () => {
           <br />
           <br />
           <span id="work">
-            <h2 className="scrolling-appear">Work Experience</h2>
+            <div className="flex justify-between scrolling-appear">
+              <h2>Work Experience</h2>
+              <ResumeDownload />
+            </div>
             <Timeline workdata={workdata} />
           </span>
           <br />
@@ -127,7 +129,8 @@ const IndexPage: React.FC<PageProps> = () => {
           <br />
           <span id="projects">
             <h2 className="scrolling-appear">Projects</h2>
-            <div className="grid grid-cols-3 xs:grid-cols-1 gap-2 scrolling-appear">
+            <div className="grid grid-cols-3 grid-auto-columns-1/3 gap-2">
+              {/* <div className="w-full flex flex-wrap items-str"> */}
               {projectdata.map((projectcard, index) => (
                 <ProjectCard {...projectcard} key={index} />
               ))}

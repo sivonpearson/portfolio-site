@@ -42,11 +42,6 @@ body {
   overflow-x: hidden;
 }
 
-.indented-list-item {
-  text-indent: -1.5em;
-  padding-left: 1.5em;
-}
-
 .header-primary {
   font-size: large;
   background-color: rgba(0, 0, 0, 0.75);
@@ -67,20 +62,116 @@ body {
   color: #a8a29e;
   transition-duration: 150ms;
   border-radius: 0.5rem;
+
+  &:hover {
+    color: white;
+  }
 }
 
-.header-secondary:hover {
+@keyframes bounceWave {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(calc(-1 * var(--amplitude)));
+  }
+}
+
+.animate-bounce-wave {
+  --amplitude: 10px;
+  --speed: 1s;
+  animation: bounceWave var(--speed) infinite ease-in-out;
+}
+
+.project-card-image {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.scrolling-fade-in {
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.scrolling-appear {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.scrolling-fade-left {
+  animation: fade-left linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes fade-right {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.scrolling-fade-right {
+  animation: fade-right linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes blip {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+a.social {
+  display: inline-block;
   color: white;
-}
 
-span.menu {
-  font-size: x-large;
-  font-family: monospace;
-  letter-spacing: 5px;
-  text-align: center;
-  transition: letter-spacing 100ms;
-}
-
-span.menu:hover {
-  letter-spacing: 10px;
+  &:hover {
+    animation: blip 0.5s infinite ease-in-out;
+  }
 }

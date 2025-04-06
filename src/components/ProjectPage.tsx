@@ -3,15 +3,13 @@ import Backdrop from "./Backdrop";
 import SecondaryHeader from "./SecondaryHeader";
 
 type Props = {
-  title: string;
-  children: React.ReactNode;
+  children: React.ReactNode | React.ReactNode[];
 };
 
-const ProjectPage: React.FC<Props> = ({ title, children }: Props) => {
+const ProjectPage: React.FC<Props> = ({ children }: Props) => {
   return (
     <Backdrop>
       <SecondaryHeader />
-      <h2 className="text-center">{title}</h2>
       {children}
     </Backdrop>
   );

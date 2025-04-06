@@ -50,6 +50,27 @@ const config: GatsbyConfig = {
         icon: `src/icons/favicon512.png`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `static`, // Copies PDFs to /public/static/
+              ignoreFileExtensions: [], // Ensures PDFs are copied
+            },
+          },
+        ],
+      },
+    },
   ],
 };
 

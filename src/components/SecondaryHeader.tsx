@@ -3,14 +3,7 @@ import React, { useState } from "react";
 
 const SecondaryHeader: React.FC = () => {
   return (
-    // <nav className="py-6 w-full flex flex-no-wrap items-center justify-between sticky top-0">
-    //   <div className="flex w-full flex-wrap items-center justify-between px-12 text-lg">
-    //     <Link to="/" className="">
-    //       Sivon | Software Developer
-    //     </Link>
-    //   </div>
-    // </nav>
-    <nav className="py-6 w-full flex flex-no-wrap items-center justify-between sticky top-0 z-50">
+    <nav className="py-6 w-full flex flex-no-wrap items-center justify-between sticky top-0">
       <div className="flex w-full flex-wrap items-center justify-between px-12 text-lg">
         <Link to="/" className="header-primary">
           Sivon | Software Developer

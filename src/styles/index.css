@@ -1,12 +1,4 @@
-:root {
-  --primary: #ffffff;
-  --accent: #111111;
-  --muted: #000000;
-  --dark: #000c45;
-  --darkmuted: #04078a;
-}
-
-@keyframes bounceWave {
+/* @keyframes bounceWave {
   0%,
   100% {
     transform: translateY(0px);
@@ -22,14 +14,8 @@
   animation: bounceWave var(--speed) infinite ease-in-out;
 }
 
-p {
-  color: var(--primary);
-}
-
 .project-card-image {
-  /* width: 100%;
-  height: 150px; You can also set the height as per your needs */
-  overflow: hidden; /* Ensures any overflowing content is hidden */
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,13 +87,21 @@ p {
   animation-range: entry 0% cover 40%;
 }
 
-a.social {
-  margin: 0 1rem;
-  transition: 150ms ease-in-out;
-  display: inline-block;
-  color: black;
+@keyframes blip {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
-a.social:hover {
+a.social {
+  display: inline-block;
   color: white;
-}
+
+  &:hover {
+    animation: blip 0.5s infinite ease-in-out;
+  }
+} */

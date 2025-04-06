@@ -13,7 +13,7 @@ const Backdrop: React.FC<Props> = ({ children }: Props) => {
 
       {/* So that the whole screen is scrollable */}
       <div className="absolute top-0 w-screen h-screen flex items-center justify-center overflow-y-auto">
-        <div className="grid grid-cols-1 fixed top-7 left-4 gap-5">
+        <div className="grid grid-cols-1 fixed top-7 left-7 gap-5">
           <a
             href="https://github.com/sivonpearson"
             className="social place-content-baseline"
