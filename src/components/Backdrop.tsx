@@ -16,7 +16,7 @@ const Backdrop: React.FC<Props> = ({ children }: Props) => {
         <div className="grid grid-cols-1 fixed top-7 left-7 gap-5">
           <a
             href="https://github.com/sivonpearson"
-            className="social place-content-baseline"
+            className="social place-content-baseline z-50"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -24,7 +24,7 @@ const Backdrop: React.FC<Props> = ({ children }: Props) => {
           </a>
           <a
             href="https://www.linkedin.com/in/sivon-pearson-59157a214/"
-            className="social place-content-baseline"
+            className="social place-content-baseline z-50"
             rel="noopener noreferrer"
             target="_blank"
           >

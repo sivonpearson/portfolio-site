@@ -12,13 +12,12 @@ const ResumeDownload: React.FC = () => {
   `);
 
   if (!data.file) {
-    // TODO: fix
     return <p className="text-red-500">Resume not found</p>;
   }
 
   return (
     <a
-      href={data.file.publicURL}
+      href={`${process.env.GATSBY_PATH_PREFIX || ""}${data.file.publicURL}`}
       rel="noopener noreferrer"
       target="_blank"
       className="flex items-center gap-1 align-middle max-w-fit"

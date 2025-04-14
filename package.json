@@ -14,13 +14,14 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b main"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.2",
     "@mui/material": "^6.1.2",
+    "framer-motion": "^12.6.3",
     "gatsby": "^5.14.1",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-google-fonts": "^1.0.1",

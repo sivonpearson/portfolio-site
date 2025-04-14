@@ -36,7 +36,7 @@ const MovieGuessProject: React.FC<PageProps> = () => {
           <p>
             This project is a fun and interactive game where users try to guess
             the <strong>IMDb rating</strong> of randomly selected movies based
-            on key movie attributes. Each round presents players with a movie's
+            on key movie attributes. Each round presents players with a movie's{" "}
             <strong>title</strong>, <strong>poster</strong>,{" "}
             <strong>plot summary</strong>, <strong>director</strong>, and other
             relevant details—challenging them to estimate the rating as
@@ -62,7 +62,7 @@ const MovieGuessProject: React.FC<PageProps> = () => {
             </a>{" "}
             and incorporates a clean, responsive UI built for smooth user
             interaction. This project blends{" "}
-            <strong>data-driven gameplay</strong>, <strong>design</strong>, and
+            <strong>data-driven gameplay</strong>, <strong>design</strong>, and{" "}
             <strong>movie trivia</strong> into a unique experience that appeals
             to both film lovers and casual players alike.
           </p>

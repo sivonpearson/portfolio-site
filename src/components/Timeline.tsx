@@ -1,4 +1,9 @@
 import React, { Fragment } from "react";
+import {
+  AppearingComp,
+  SlideLeftComp,
+  SlideRightComp,
+} from "../components/FadingComps";
 
 export type WorkData = {
   jobtitle: string;
@@ -25,20 +30,24 @@ const Timeline: React.FC<Props> = ({ workdata }: Props) => {
           <Fragment key={key}>
             <div className="grid grid-cols-[1fr_auto_1fr] gap-x-2 items-center mx-auto">
               {datum.is_left ? (
-                <EventCard {...datum} />
+                <SlideLeftComp amountVisible={0.5} animDuration={3}>
+                  <EventCard {...datum} />
+                </SlideLeftComp>
               ) : (
-                <div className="text-white text-right scrolling-fade-left">
-                  {datum.dates}
-                </div>
+                <SlideLeftComp amountVisible={0.5} animDuration={3}>
+                  <div className="text-white text-right">{datum.dates}</div>
+                </SlideLeftComp>
               )}
 
               <Pillar />
               {!datum.is_left ? (
-                <EventCard {...datum} />
+                <SlideRightComp amountVisible={0.5} animDuration={3}>
+                  <EventCard {...datum} />
+                </SlideRightComp>
               ) : (
-                <div className="text-white scrolling-fade-right">
-                  {datum.dates}
-                </div>
+                <SlideRightComp amountVisible={0.5} animDuration={3}>
+                  <div className="text-white">{datum.dates}</div>
+                </SlideRightComp>
               )}
             </div>
             {Number(key) < workdata.length - 1 && <Circle />}
@@ -69,11 +78,7 @@ const EventCard: React.FC<WorkData> = ({
   is_left,
 }: WorkData) => {
   return (
-    <div
-      className={`flex flex-col gap-y-2 border shadow-2xl shadow-white rounded-xl p-4 ${
-        is_left ? "scrolling-fade-left" : "scrolling-fade-right"
-      }`}
-    >
+    <div className="flex flex-col gap-y-2 border shadow-2xl shadow-white rounded-xl p-4">
       <div className="leading-tight">
         <div className="text-white font-bold text-lg border-b">{jobtitle}</div>
         <div className="text-sm text-white">{company}</div>

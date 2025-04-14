@@ -16,7 +16,7 @@ const workdata: WorkData[] = [
     is_left: true,
   },
   {
-    jobtitle: "Python Engineer",
+    jobtitle: "Slack-HubSpot Sync Developer",
     company: "Growth Acceleration Partners",
     descriptions: [
       "Built an app to upload Slack deal channel conversations to HubSpot deals every 24 hours.",

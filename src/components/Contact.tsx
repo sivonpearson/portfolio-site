@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="max-w-3xl mx-auto p-6 bg-black bg-opacity-10 rounded-lg shadow-2xl shadow-white mb-16 scrolling-appear"
+      className="max-w-3xl mx-auto p-6 bg-black bg-opacity-10 rounded-lg mb-16 shadow-2xl shadow-white"
     >
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="px-4 py-2 rounded bg-black text-white hover:bg-white hover:text-black hover:font-bold transition-all duration-150 border-transparent"
+          className="px-4 py-2 rounded bg-black text-white hover:bg-white hover:text-black hover:font-bold transition-all duration-500 border-transparent"
           style={{ fontFamily: "Montserrat" }}
         >
           Send
